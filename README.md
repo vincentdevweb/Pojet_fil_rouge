@@ -10,6 +10,7 @@ Ce projet est une application microservices construite avec Node.js et React. Il
 - [Table des matières](#table-des-matières)
 - [Architecture](#architecture)
 - [Chemins d'Ingress](#chemins-dingress)
+- [Noms de Services Kubernetes](#noms-de-services-kubernetes)
 - [Prérequis](#prérequis)
 - [Installation](#installation)
 - [Déploiement](#déploiement)
@@ -38,6 +39,22 @@ L'application est composée des services suivants :
   
 - `/?(.*)` : Dirigé vers le service `client-srv` sur le port 3000.
   - Utilisé pour accéder à l'interface utilisateur.
+ 
+
+
+### Noms de Services Kubernetes
+
+Assurez-vous que les noms de services dans vos fichiers de déploiement Kubernetes correspondent aux noms de services utilisés dans le code de l'application. Voici les noms de services attendus :
+
+- **client-srv**: Service pour l'interface utilisateur.
+- **posts-clusterip-srv**: Service pour la gestion des posts.
+- **query-srv**: Service pour la gestion des requêtes.
+- **comments-srv**: Service pour la gestion des commentaires.
+- **moderation-srv**: Service pour la modération des commentaires.
+- **event-bus-srv**: Service pour la gestion des événements entre les services.
+
+Si vous modifiez ces noms, assurez-vous également de mettre à jour les références correspondantes dans le code de l'application.
+
 
 ## Prérequis
 
