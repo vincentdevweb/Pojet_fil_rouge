@@ -5,8 +5,8 @@ set services=client posts comments event-bus moderation query
 set userdockerhub=vincentdevweb
 
 rem Parcours de la liste des services et construction de chaque image Docker
-for %%service in (%services%) do (
-    docker build -t %%service .\%%service
-    docker tag %%service %%userdockerhub\%%service:latest
-    docker push %%userdockerhub\%%service:latest
+for %%s in (%services%) do (
+    docker build -t %%s .\%%s
+    docker tag %%s %userdockerhub%/%%s:latest
+    docker push %userdockerhub%/%%s:latest
 )
