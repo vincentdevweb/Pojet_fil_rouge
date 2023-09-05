@@ -99,6 +99,7 @@ Si vous modifiez ces ports, assurez-vous également de mettre à jour les réfé
     docker build -t posts ./posts
     # Répétez pour tous les services
     ```
+    Le projet est basé sur l'image **node:alpine**
 
 2. Déployez les services sur Kubernetes :
     ```bash
