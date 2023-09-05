@@ -61,7 +61,6 @@ Si vous modifiez ces noms, assurez-vous également de mettre à jour les référ
 - Node.js
 - Docker
 - Kubernetes
-- Helm (optionnel)
 
 ## Installation
 
