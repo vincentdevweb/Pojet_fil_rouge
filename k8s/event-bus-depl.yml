@@ -34,6 +34,6 @@ spec:
     app: event-bus
   ports:
     - protocol: TCP
-      port: 4005
+      port: 80
       targetPort: 4005
       name: event-bus

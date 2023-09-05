@@ -1,35 +1,32 @@
+# moderation-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: client-depl
-  labels: 
-    app: client
+  name: moderation-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: client
+      app: moderation
   template:
     metadata:
       labels:
-        app: client
+        app: moderation
     spec:
       containers:
-      - name: client
-        image: vincentdevweb/client:latest
-        ports:
-        - containerPort: 3000
+        - name: moderation
+          image: vincentdevweb/moderation:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: client-srv
+  name: moderation-srv
 spec:
   type: NodePort
   selector:
-    app: client
+    app: moderation
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 3000
-      name: websocket
+      targetPort: 4003
+      name: moderation

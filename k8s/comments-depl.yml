@@ -34,6 +34,6 @@ spec:
     app: comments
   ports:
     - protocol: TCP
-      port: 4001
+      port: 80
       targetPort: 4001
       name: comments
