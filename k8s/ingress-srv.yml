@@ -15,34 +15,31 @@ spec:
     - host: localhost
       http:
         paths:
-          - path: "/posts/create"
-            pathType: Prefix
-            backend:
-              service:
-                name: posts-clusterip-srv
-                port:
-                  number: 4000
-          - path: "/posts"
-            pathType: Prefix
-            backend:
-              service:
-                name: query-srv
-                port:
-                  number: 4002
-          - path: "/posts/?(.*)"
-            pathType: Prefix
-            backend:
-              service:
-                name: comments-srv
-                port:
-                  number: 4001
-    - host: localhost
-      http:
-        paths:
-          - path: "/?(.*)"
-            pathType: Prefix
+          - pathType: Prefix
+            path: /?(.*)/
             backend:
               service:
                 name: client-srv
                 port:
                   number: 3000
+          - pathType: Prefix
+            path:  /posts/create
+            backend:
+              service:
+                name: posts-clusterip-srv
+                port:
+                  number: 4000
+          - pathType: Prefix
+            path: /post  
+            backend:
+              service:
+                name: query-srv
+                port:
+                  number: 4002
+          - pathType: Prefix
+            path:  /posts/?(.*)/comment
+            backend:
+              service:
+                name: comments-srv
+                port:
+                  number: 4001

@@ -5,13 +5,12 @@ FROM node:alpine
 WORKDIR /app
 
 # Copiez les fichiers nécessaires de votre projet dans le conteneur
-COPY package*.json ./
+COPY . .
 
 # Installez les dépendances de l'application
 RUN npm install
 
 # Construit l'application
-COPY . .
 RUN npm run build
 
 # Exposez le port sur lequel l'application va écouter

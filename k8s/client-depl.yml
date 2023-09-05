@@ -29,7 +29,7 @@ spec:
   selector:
     app: client
   ports:
-    - protocol: TCP
-      port: 80
+    - name: client
+      protocol: TCP
+      port: 3000
       targetPort: 3000
-      name: websocket
