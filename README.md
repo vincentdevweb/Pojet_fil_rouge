@@ -11,6 +11,7 @@ Ce projet est une application microservices construite avec Node.js et React. Il
 - [Architecture](#architecture)
 - [Chemins d'Ingress](#chemins-dingress)
 - [Noms de Services Kubernetes](#noms-de-services-kubernetes)
+- [Ports des Services](#ports-des-services)
 - [Prérequis](#prérequis)
 - [Installation](#installation)
 - [Déploiement](#déploiement)
@@ -54,6 +55,20 @@ Assurez-vous que les noms de services dans vos fichiers de déploiement Kubernet
 - **event-bus-srv**: Service pour la gestion des événements entre les services.
 
 Si vous modifiez ces noms, assurez-vous également de mettre à jour les références correspondantes dans le code de l'application.
+
+
+### Ports des Services
+
+Chaque service écoute sur un port spécifique. Assurez-vous que ces ports sont correctement configurés dans vos fichiers de déploiement Kubernetes et dans tout autre outil de gestion des conteneurs que vous pourriez utiliser. Voici les ports attendus pour chaque service :
+
+- **client-srv**: Écoute sur le port 3000.
+- **posts-clusterip-srv**: Écoute sur le port 4000.
+- **query-srv**: Écoute sur le port 4002.
+- **comments-srv**: Écoute sur le port 4001.
+- **moderation-srv**: Écoute sur le port 4003.
+- **event-bus-srv**: Écoute sur le port 4005.
+
+Si vous modifiez ces ports, assurez-vous également de mettre à jour les références correspondantes dans le code de l'application et les fichiers de configuration Kubernetes.
 
 
 ## Prérequis
