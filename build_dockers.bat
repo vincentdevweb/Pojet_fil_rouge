@@ -1,6 +1,6 @@
 @echo off
 
-rem Liste des services que vous souhaitez construire
+rem Liste des services
 set services=client posts comments event-bus moderation query
 set userdockerhub=vincentdevweb
 

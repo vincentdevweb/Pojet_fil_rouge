@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Liste des services que vous souhaitez construire
+# Liste des services
 services=("client" "posts" "comments" "event-bus" "moderation" "query")
 userdockerhub="vincentdevweb"
 
