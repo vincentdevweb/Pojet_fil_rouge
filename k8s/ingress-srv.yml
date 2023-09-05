@@ -3,10 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-red-srv
   annotations:
-    nginx.ingress.kubernetes.io/websocket-services: "true"
     nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "360s"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "360s"
   labels:
     name: ingress-red-srv
 spec:
@@ -16,28 +13,28 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: /?(.*)/
+            path: /
             backend:
               service:
                 name: client-srv
                 port:
                   number: 3000
           - pathType: Prefix
-            path:  /posts/create
+            path: /posts/create
             backend:
               service:
                 name: posts-clusterip-srv
                 port:
                   number: 4000
           - pathType: Prefix
-            path: /post  
+            path: /post
             backend:
               service:
                 name: query-srv
                 port:
                   number: 4002
           - pathType: Prefix
-            path:  /posts/?(.*)/comment
+            path: /posts/?(.*)/comment
             backend:
               service:
                 name: comments-srv

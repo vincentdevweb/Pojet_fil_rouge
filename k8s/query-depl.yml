@@ -17,10 +17,6 @@ spec:
       containers:
       - name: query
         image: vincentdevweb/query:latest
-        resources:
-          limits:
-            memory: "258Mi"
-            cpu: "1000m"
         ports:
         - containerPort: 4002
 ---
