@@ -4,6 +4,7 @@ metadata:
   name: ingress-red-srv
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/websocket-services: "client-srv"
   labels:
     name: ingress-red-srv
 spec:
@@ -26,14 +27,14 @@ spec:
                 name: query-srv
                 port:
                   number: 4002
-          - path: /posts/?(.*)/comments
+          - path: /posts/
             pathType: Prefix
             backend:
               service:
                 name: comments-srv
                 port:
                   number: 4001
-          - path: /?(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
