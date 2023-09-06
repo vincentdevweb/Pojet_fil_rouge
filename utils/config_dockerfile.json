@@ -1,0 +1,12 @@
+{
+    "userdockerhub": "vincentdevweb",
+    "services": [
+      "client",
+      "posts",
+      "comments",
+      "event-bus",
+      "moderation",
+      "query"
+    ]
+  }
+  
