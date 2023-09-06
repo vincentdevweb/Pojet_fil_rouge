@@ -92,11 +92,10 @@ Si vous modifiez ces ports, assurez-vous également de mettre à jour les réfé
 
 ## Installation Quick
 
-1. Clonez ce dépôt :
-    ```bash
-    git clone https://github.com/vincentdevweb/Pojet_fil_rouge.git
-    ```
-
+Clonez ce dépôt :
+```sh
+git clone https://github.com/vincentdevweb/Pojet_fil_rouge.git
+```
 ## Installation with docker hub image
 
 1. Verifier que vous êtes log sur docker hub :
