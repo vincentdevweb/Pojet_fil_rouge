@@ -109,12 +109,10 @@ Puis allez a la section [Deploiement](#déploiement) pour avoir une installation
     ```bash
     build_dockers.bat ou build_dockers.sh
     ```
-    puis dans le dossier k8s les fichiers
+    Puis dans le dossier k8s les fichiers
     ```bash
     *-depl.yml
-    ```
-    Par puis dans le dossier k8s les fichiers
-    ```bash
+    >>>>> modifier la cible dans les fichiers
     image: <my-username-dockerhub>/*
     ```
 
@@ -127,6 +125,8 @@ Puis allez a la section [Deploiement](#déploiement) pour avoir une installation
     ou Linux : 
     ./build_dockers.sh 
     ```
+
+Maintenant rendez-vous à l'étape [Deploiement](#déploiement)
 
 ## Déploiement
 
