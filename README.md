@@ -85,18 +85,19 @@ Si vous modifiez ces ports, assurez-vous également de mettre à jour les réfé
 
 
 ## Prérequis
-
+  
+- Git
 - Node.js
 - Docker / Docker Desktop
 - Kubernetes
 
 ## Quick Start
 
-Clonez ce dépôt :
+Depuis un terminal Clonez ce dépôt :
 ```sh
 git clone https://github.com/vincentdevweb/Pojet_fil_rouge.git
 ```
-Puis Installer Ingress Nginx depuis un terminal :
+Puis Installer Ingress Nginx :
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml
 ```
