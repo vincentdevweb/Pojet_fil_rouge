@@ -93,7 +93,7 @@ Si vous modifiez ces ports, assurez-vous également de mettre à jour les réfé
 ## Quick Start
 
 Clonez ce dépôt :
-xv
+```sh
 git clone https://github.com/vincentdevweb/Pojet_fil_rouge.git
 ```
 Puis Installer Ingress Nginx depuis un terminal :
