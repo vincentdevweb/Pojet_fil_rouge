@@ -24,7 +24,7 @@ Ce projet est une application microservices construite avec Node.js et React. Il
 - [Noms de Services Kubernetes](#noms-de-services-kubernetes)
 - [Ports des Services](#ports-des-services)
 - [Prérequis](#prérequis)
-- [Installation Quick](#installation-quick)
+- [Quick Start](#quick-start)
 - [Installation with docker hub image](#installation-with-docker-hub-image)
 - [Déploiement](#déploiement)
 - [Auteur](#auteur)
@@ -90,12 +90,14 @@ Si vous modifiez ces ports, assurez-vous également de mettre à jour les réfé
 - Docker / Docker Desktop
 - Kubernetes
 
-## Installation Quick
+## Quick Start
 
 Clonez ce dépôt :
 ```sh
 git clone https://github.com/vincentdevweb/Pojet_fil_rouge.git
 ```
+
+Puis allez a la section [Deploiement](#déploiement) pour avoir une installation rapide sinon pour plus de configuration allez à [Installation with docker hub image](#installation-with-docker-hub-image)
 ## Installation with docker hub image
 
 1. Verifier que vous êtes log sur docker hub :
