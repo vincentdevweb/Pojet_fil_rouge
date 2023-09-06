@@ -93,8 +93,12 @@ Si vous modifiez ces ports, assurez-vous également de mettre à jour les réfé
 ## Quick Start
 
 Clonez ce dépôt :
-```sh
+xv
 git clone https://github.com/vincentdevweb/Pojet_fil_rouge.git
+```
+Puis Installer Ingress Nginx depuis un terminal :
+```sh
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml
 ```
 
 Puis allez a la section [Deploiement](#déploiement) pour avoir une installation rapide sinon pour plus de configuration allez à [Installation with docker hub image](#installation-with-docker-hub-image)
