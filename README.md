@@ -1,5 +1,16 @@
 # Projet fil rouge
-
+```
+ _______   ______  __       __        ______   ______  
+|       \ /      \|  \     |  \      /      \ /      \ 
+| ▓▓▓▓▓▓▓\  ▓▓▓▓▓▓\ ▓▓     | ▓▓     |  ▓▓▓▓▓▓\  ▓▓▓▓▓▓\
+| ▓▓__/ ▓▓ ▓▓__| ▓▓ ▓▓     | ▓▓     | ▓▓__| ▓▓ ▓▓___\▓▓
+| ▓▓    ▓▓ ▓▓    ▓▓ ▓▓     | ▓▓     | ▓▓    ▓▓\▓▓    \ 
+| ▓▓▓▓▓▓▓| ▓▓▓▓▓▓▓▓ ▓▓     | ▓▓     | ▓▓▓▓▓▓▓▓_\▓▓▓▓▓▓\
+| ▓▓     | ▓▓  | ▓▓ ▓▓_____| ▓▓_____| ▓▓  | ▓▓  \__| ▓▓
+| ▓▓     | ▓▓  | ▓▓ ▓▓     \ ▓▓     \ ▓▓  | ▓▓\▓▓    ▓▓
+ \▓▓      \▓▓   \▓▓\▓▓▓▓▓▓▓▓\▓▓▓▓▓▓▓▓\▓▓   \▓▓ \▓▓▓▓▓▓ 
+                                                       
+```
 ## Introduction
 
 Ce projet est une application microservices construite avec Node.js et React. Il est conçu pour être déployé sur Kubernetes.
@@ -13,8 +24,10 @@ Ce projet est une application microservices construite avec Node.js et React. Il
 - [Noms de Services Kubernetes](#noms-de-services-kubernetes)
 - [Ports des Services](#ports-des-services)
 - [Prérequis](#prérequis)
-- [Installation](#installation)
+- [Installation Quick](#installation-quick)
+- [Installation with docker hub image](#installation-with-docker-hub-image)
 - [Déploiement](#déploiement)
+- [Auteur](#auteur)
 
 ## Architecture
 
@@ -74,34 +87,54 @@ Si vous modifiez ces ports, assurez-vous également de mettre à jour les réfé
 ## Prérequis
 
 - Node.js
-- Docker
+- Docker / Docker Desktop
 - Kubernetes
 
-## Installation
+## Installation Quick
 
 1. Clonez ce dépôt :
     ```bash
-    git clone https://github.com/Mossbaddi/Pojet_fil_rouge.git
+    git clone https://github.com/vincentdevweb/Pojet_fil_rouge.git
     ```
 
-2. Installez les dépendances pour chaque service :
+## Installation with docker hub image
+
+1. Verifier que vous êtes log sur docker hub :
     ```bash
-    cd client && npm install
-    cd ../posts && npm install
-    # Répétez pour tous les services
+    docker login
+    ```
+
+2. Changer le nom de l'utilisateur dans les fichiers suivant :
+    ```bash
+    build_dockers.bat ou build_dockers.sh
+    ```
+    puis dans le dossier k8s les fichiers
+    ```bash
+    *-depl.yml
+    ```
+    Par puis dans le dossier k8s les fichiers
+    ```bash
+    image: <my-username-dockerhub>/*
+    ```
+
+3. Installez les conteneurs depuis le dossier racine:
+    
+    ```bash
+    Windows :
+    ./build_dockers.bat
+
+    ou Linux : 
+    ./build_dockers.sh 
     ```
 
 ## Déploiement
 
-1. Construisez les images Docker pour chaque service :
-    ```bash
-    docker build -t client ./client
-    docker build -t posts ./posts
-    # Répétez pour tous les services
-    ```
-    Le projet est basé sur l'image **node:alpine**
+Déployez les services sur Kubernetes :
 
-2. Déployez les services sur Kubernetes :
-    ```bash
-    kubectl apply -f k8s/
-    ```
+```sh
+kubectl apply -f k8s/
+```
+
+## Auteur
+
+**_PALLAS_**
